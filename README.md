@@ -1,5 +1,7 @@
 # SunnyMouse
 
+[Live Demo](https://sunnymouse.azurewebsites.net/)
+
 ## Getting Started
 Include all neccessary files:
 <ol>
