@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .positionDisplay {
+        padding: 25px;
+    }
+
+    .mainContainer {
+        height: 500px;
+        display: table;
+        width: 100%;
+    }
+
+    .buttonHolder {
+        height: 100%;
+        vertical-align: middle;
+        display: table-cell;
+        width: 100%;
+    }
+
+    .buttonHolder input {
+        margin: 50px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4 sunnyMouseText"
+                   data-max-offsetx="10"
+                   data-max-offsety="10"
+                   data-highlight-color="blue"
+                   data-highlight-spread="0">Sunny Mouse</h1>
+    <div class="mainContainer">
+        <div class="buttonHolder">
+            <input type="button"
+                   class="sunnyMouseBox btn-dark btn btn-lg"
+                   value="Default" />
+            <input type="button"
+                   class="sunnyMouseBox btn-dark btn btn-lg"
+                   data-max-offsetx="20"
+                   data-max-offsety="20"
+                   data-highlight-color="green"
+                   value="Custom" />
+            <input type="button"
+                   class="sunnyMouseBox btn-dark btn btn-lg"
+                   data-max-offsetx="10"
+                   data-max-offsety="10"
+                   data-highlight-color="#6f6f6f"
+                   data-highlight-spread="0"
+                   data-highlight-inset="inset"
+                   value="Inset" />
+            <input type="button"
+                   class="sunnyMouseBox btn-dark btn btn-lg"
+                   data-max-offsetx="15"
+                   data-max-offsety="15"
+                   data-highlight-color="red"
+                   data-highlight-spread="15"
+                   data-highlight-inset=""
+                   value="Spread" />
+        </div>
+    </div>
+</div>
