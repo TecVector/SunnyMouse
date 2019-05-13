@@ -104,7 +104,6 @@ function SetHighlights(xPos, yPos) {
         if (inset != "inset") {
             inset = "";
         };
-        console.log(spread);
         var styleTag = xOffset + "px " + yOffset + "px " + blur + "px " + spread + "px " + color + " " + inset;
         btn.css("box-shadow", styleTag);
     };
