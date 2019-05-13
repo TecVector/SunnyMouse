@@ -9,6 +9,25 @@ Include all neccessary files:
 <li>SunnyMouse.js or SunnyMouse.min.js</li>
 </ol>
 
+To install SunnyMouse:
+via Package Manager:
+```shell
+Install-Package SunnyMouse -Version 1.0.0.1
+```
+via .NET CLI:
+```shell
+dotnet add package SunnyMouse --version 1.0.0.1
+```
+via PackageReference:
+```shell
+<PackageReference Include="SunnyMouse" Version="1.0.0.1" />
+```
+
+via Paket CLI:
+```shell
+paket add SunnyMouse --version 1.0.0.1
+```
+
 ### For Shadowing Text:
 Add the class 'sunnyMouseText' to the text element (Required)
 Add the following data-attributes to the elemement:
