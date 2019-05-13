@@ -3,14 +3,65 @@
 @{
     ViewData["Title"] = "Read Me";
 }
-<h1>@ViewData["Title"]</h1>
-
-<h3>Getting Started</h3>
-<p><b>Include all neccessary files</b></p>
-<ul>
-    <li>jQuery (anything above 1.9.1 works)</li>
-    <li>The brightmouse.js (or brightmouse.min.js) file</li>
-</ul>
-
+    <article class="markdown-body entry-content p-3 p-md-6" itemprop="text">
+        <h1><a id="user-content-sunnymouse" class="anchor" aria-hidden="true" href="#sunnymouse"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SunnyMouse</h1>
+        <p><a href="https://sunnymouse.azurewebsites.net/" rel="nofollow">Live Demo</a></p>
+        <p>SunnyMouse is a javascript tool that will allow you to add dynamic shadowing to elements without any extra javascript or css tricks.  If you have a certain text, or a block element you need to help draw the use towards, then this is the tool for you.  Think of it as turning your mouse into a flashlight, and the shadow casts appropriately.  Shadow depth and color are all fully customizable using simple data attributes on the object(s).</p>
+        <h2><a id="user-content-getting-started" class="anchor" aria-hidden="true" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Started</h2>
+        <p>Include all neccessary files:</p>
+        <ol>
+            <li>jQuery (Any version higher than 1.9.1 will work)</li>
+            <li>SunnyMouse.js or SunnyMouse.min.js</li>
+        </ol>
+        <p>
+            To install SunnyMouse:
+            via Package Manager:
+        </p>
+        <div class="highlight highlight-source-shell"><pre>Install-Package SunnyMouse -Version 1.0.0.1</pre></div>
+        <p>via .NET CLI:</p>
+        <div class="highlight highlight-source-shell"><pre>dotnet add package SunnyMouse --version 1.0.0.1</pre></div>
+        <p>via PackageReference:</p>
+        <div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>PackageReference Include=<span class="pl-s"><span class="pl-pds">"</span>SunnyMouse<span class="pl-pds">"</span></span> Version=<span class="pl-s"><span class="pl-pds">"</span>1.0.0.1<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span></pre></div>
+        <p>via Paket CLI:</p>
+        <div class="highlight highlight-source-shell"><pre>paket add SunnyMouse --version 1.0.0.1</pre></div>
+        <h3><a id="user-content-for-shadowing-text" class="anchor" aria-hidden="true" href="#for-shadowing-text"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For Shadowing Text:</h3>
+        <p>
+            Add the class 'sunnyMouseText' to the text element (Required)
+            Add the following data-attributes to the elemement:
+        </p>
+        <ol>
+            <li>data-max-offsetx (default is 10)</li>
+            <li>data-max-offsety (default is 10)</li>
+            <li>data-highlight-color (default is #6f6f6f)</li>
+        </ol>
+        <div class="highlight highlight-text-html-basic">
+            <pre>&lt;<span class="pl-ent">h1</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>display-4 sunnyMouseText<span class="pl-pds">"</span></span> 
+            <span class="pl-e">data-max-offsetx</span>=<span class="pl-s"><span class="pl-pds">"</span>10<span class="pl-pds">"</span></span> 
+            <span class="pl-e">data-max-offsety</span>=<span class="pl-s"><span class="pl-pds">"</span>10<span class="pl-pds">"</span></span> 
+            <span class="pl-e">data-highlight-color</span>=<span class="pl-s"><span class="pl-pds">"</span>blue<span class="pl-pds">"</span></span>&gt;Text Element&lt;/<span class="pl-ent">h1</span>&gt;</pre>
+        </div>
+        <h3><a id="user-content-for-shadowing-block-elements" class="anchor" aria-hidden="true" href="#for-shadowing-block-elements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For Shadowing Block Elements:</h3>
+        <p>
+            Add the class 'sunnyMouseBox' to the block element (Required)
+            Add the following data-attributes to the elemement:
+        </p>
+        <ol>
+            <li>data-max-offsetx (default is 10)</li>
+            <li>data-max-offsety (default is 10)</li>
+            <li>data-highlight-color (default is #6f6f6f)</li>
+            <li>data-highlight-spread (default is 10)</li>
+            <li>data-highlight-inset (default is off)</li>
+        </ol>
+        <div class="highlight highlight-text-html-basic">
+            <pre>&lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span>
+            <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sunnyMouseBox btn-dark btn btn-lg<span class="pl-pds">"</span></span>
+            <span class="pl-e">data-max-offsetx</span>=<span class="pl-s"><span class="pl-pds">"</span>10<span class="pl-pds">"</span></span>
+            <span class="pl-e">data-max-offsety</span>=<span class="pl-s"><span class="pl-pds">"</span>10<span class="pl-pds">"</span></span>
+            <span class="pl-e">data-highlight-color</span>=<span class="pl-s"><span class="pl-pds">"</span>#6f6f6f<span class="pl-pds">"</span></span>
+            <span class="pl-e">data-highlight-spread</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>
+            <span class="pl-e">data-highlight-inset</span>=<span class="pl-s"><span class="pl-pds">"</span>inset<span class="pl-pds">"</span></span>
+            <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Block Element<span class="pl-pds">"</span></span> /&gt;</pre>
+        </div>
+    </article>
 
 
