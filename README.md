@@ -2,6 +2,8 @@
 
 [Live Demo](https://sunnymouse.azurewebsites.net/)
 
+SunnyMouse is a javascript tool that will allow you to add dynamic shadowing to elements without any extra javascript or css tricks.  If you have a certain text, or a block element you need to help draw the use towards, then this is the tool for you.  Think of it as turning your mouse into a flashlight, and the shadow casts appropriately.  Shadow depth and color are all fully customizable using simple data attributes on the object(s).
+
 ## Getting Started
 Include all neccessary files:
 <ol>
